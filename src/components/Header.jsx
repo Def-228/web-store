@@ -1,9 +1,12 @@
 import { Link } from "react-router"
+import styles from "../styles/Header.module.css"
 
 export const Header = () => {
     return (
-        <header>
-            <div>
+        <header className={styles.header}>
+            <div className={styles.title}>
+                <h2>Exclusive</h2>
+            </div>
                 <nav>
                     <ul>
                         <li>
@@ -17,7 +20,6 @@ export const Header = () => {
                         </li>
                     </ul>
                 </nav>
-            </div>
         </header>
     )
 }
