@@ -9,24 +9,30 @@ export const Header = () => {
             </div>
                 <nav>
                     <ul>
-                        <li>
+                        <li className={styles.home}>
                             <Link to='/'>Home</Link>
                         </li>
-                        <li>
-                            <Link to='sign-in'>Log in</Link>
-                        </li>
-                        <li>
-                            <Link to='sign-up'>Sign up</Link>
-                        </li>
-                        <li>
+                        
+                        <li className={styles.products}>
                             <Link to='products'>Our Products</Link>
                         </li>
-                        <li>
+                        <li className={styles.signIn}>
+                            <Link to='sign-in'>Log in</Link>
+                        </li>
+                        <li className={styles.signUp}>
+                            <Link to='sign-up'>Sign up</Link>
+                        </li>
+                       
+                        <li className={styles.search}>
+                            <input type="text" placeholder="Search" />
+                        </li>
+                         <li className={styles.wishList}>
                             <Link to='wishlist'>Wishlist</Link>
                         </li>
-                        <li>
+                        <li className={styles.cart}>
                             <Link to='cart'>Cart</Link>
                         </li>
+                        
                     </ul>
                 </nav>
         </header>
