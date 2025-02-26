@@ -25,14 +25,7 @@ export const Header = () => {
                        
                         <li className={styles.search}>
                             <input type="text" placeholder="Search" />
-                        </li>
-                         <li className={styles.wishList}>
-                            <Link to='wishlist'>Wishlist</Link>
-                        </li>
-                        <li className={styles.cart}>
-                            <Link to='cart'>Cart</Link>
-                        </li>
-                        
+                        </li>    
                     </ul>
                 </nav>
         </header>
