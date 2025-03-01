@@ -33,29 +33,27 @@ nav ul{
     font-weight: 500;
     list-style: none;
     display: flex;
-    gap: 50px;
+    gap: 100px;
     margin-top: 30px;
-    transition: color 0.3s ease;
 }
 .search {
     display: flex;
     align-items: center;
     background-color: white ;
-    padding: 8px 15px;
-    border-radius: 8px;
     margin-left: 100px;
-    margin-top: -10px;
+    margin-top: -16px;
 }
 
 .search input {
     background: transparent;
     outline: none;
-    padding: 5px;
-    width: 350px;
-    height: 50px;
-    font-size: 20px;
+    padding: 10px;
+    width: 500px;
+    height: 60px;
+    font-size: 18px;
     background-color: whitesmoke;
-    border: 10px;
+    border: solid gray 1px;
+    border-radius: 5px;
 }
 
 .header nav ul li a{
