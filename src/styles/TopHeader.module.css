@@ -1,0 +1,18 @@
+.topHeader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000;
+    z-index: 1000;
+    display: flex;
+    color: white;
+    height: 65px;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+.Shop{
+    font-weight: 700;
+    color: white;
+}

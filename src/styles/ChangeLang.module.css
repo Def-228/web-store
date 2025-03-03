@@ -1,0 +1,45 @@
+.dropdown {
+    position: absolute;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 2000;
+    height: 110px;
+    width: 230px;
+    margin-left: -270px;
+    margin-top: 10px;
+}
+
+.langButton {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: white;
+    cursor: pointer;
+    text-align: left;
+    font-size: 20px;
+}
+
+.langButton:hover {
+    background: #f1f1f1;
+}
+.container{
+    position: fixed;
+    z-index: 2000;
+    margin-left: 1600px;
+}
+.button{
+    width: 70px;
+    height: 40px;
+    color: white;
+    background: #000;
+    border: none;
+    font-size: 20px;
+    padding-top: 18px;
+    margin-left: -190px;
+    cursor: pointer;
+}
+ul{
+    list-style: none;
+}
