@@ -8,8 +8,9 @@ export function App() {
     <div>
       <Header />
       <Routes>
-        <Route path="*" element={<NotFoundPage />}/>
-        <Route path='/' element={<HomePage />}/>
+        <Route path="/" element={<HomePage />} />
+        <Route path="sign-in" element={<SignIn />} />
+        <Route path="sign-up" element={<SignUp />} />
       </Routes>
     </div>
     
