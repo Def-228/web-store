@@ -1,18 +1,16 @@
 import { Route, Routes } from 'react-router-dom';
-import { HomePage }from './pages/HomePage';
+import { HomePage } from './pages/HomePage';
 import { NotFoundPage } from './pages/NotFoundPage';
-import { Header } from './components/Header'
+import Header from './components/Header';
 
 export function App() {
   return (
     <div>
-      <Header />
+      <Header/>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="sign-in" element={<SignIn />} />
-        <Route path="sign-up" element={<SignUp />} />
+        <Route path="/not-found" element={<NotFoundPage />} />
       </Routes>
     </div>
-    
   );
 }

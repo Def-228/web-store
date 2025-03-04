@@ -44,7 +44,7 @@ nav ul{
     padding: 8px 15px;
     border-radius: 8px;
     margin-left: 100px;
-    margin-top: -10px;
+    margin-top: -10px
 }
 
 .search input {
@@ -61,7 +61,7 @@ nav ul{
 .header nav ul li a{
     text-decoration: none;
     color: gray;
-    font-size: 22px;
+    font-size: 23px;
 }
 .header nav ul li a:hover{
     color: black;

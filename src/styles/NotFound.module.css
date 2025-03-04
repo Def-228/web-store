@@ -1,0 +1,32 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 450px;
+}
+
+.container h1 {
+    font-size: 130px;
+    margin-bottom: 20px;
+    margin-top: -115px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+
+.container h2 {
+    font-weight: initial;
+}
+
+.button {
+    margin-top: 35px;
+    font-weight: bolder;
+    background-color: #e74c3c;
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 7px;
+    font-size: 1em;
+    cursor: pointer;
+    display: inline-block;
+  }
