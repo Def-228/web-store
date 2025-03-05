@@ -1,10 +1,13 @@
 import { Route, Routes } from "react-router";
 import { HomePage } from "./pages/HomePage";
-import { SignIn } from "pages/SignIn";
-import { SignUp } from "/pages/SignUp";
-import { ProductsPage } from "../pages/ProductsPage";
-import { TopHeader } from "../components/TopHeader";
-import { ChangeLang } from "../components/ChangeLang";
+import { ProductsPage } from "./pages/ProductsPage";
+import { TopHeader } from "./components/TopHeader";
+import { ChangeLang } from "./components/ChangeLang";
+import { Header } from "./components/Header";
+import { SignIn } from "./pages/SignIn";
+import { SignUp } from "./pages/SignUp";
+import { NotFound } from "./pages/NotFoundPage";
+import { Navigate } from "react-router";
 
 export function App() {
   return (
@@ -14,9 +17,10 @@ export function App() {
       <Header />
       <Routes>
         <Route path="/products" element={<ProductsPage />}/>
-        <Route path="/" element={<HomePage />} />
-        <Route path="sign-in" element={<SignIn />} />
-        <Route path="sign-up" element={<SignUp />} />
+        <Route path="/" element={<HomePage />}/>
+        <Route path="/sign-in" element={<SignIn />}/>
+        <Route path="/sign-up" element={<SignUp /> } />
+        <Route path="/not-found" element={<NotFound />} />
       </Routes>
     </div>
     

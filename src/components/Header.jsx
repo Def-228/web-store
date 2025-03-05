@@ -1,7 +1,7 @@
 import { Link } from "react-router"
 import styles from "../styles/Header.module.css"
 
-export const Header = () => {
+export const Header = ({ user, onLogout }) => {
     return (
         <header className={styles.header}>
             <div className={styles.title}>
@@ -16,13 +16,20 @@ export const Header = () => {
                         <li className={styles.products}>
                             <Link to='/products'>Our Products</Link>
                         </li>
-                        <li className={styles.signIn}>
-                            <Link to='/sign-in'>Log in</Link>
+                        {user ? (
+                        <li className={styles.signOut}>
+                            <button onClick={onLogout}>Log Out</button>
                         </li>
-                        <li className={styles.signUp}>
-                            <Link to='/sign-up'>Sign up</Link>
-                        </li>
-                       
+                        ) : (
+                            <>
+                                <li className={styles.signIn}>
+                                    <Link to='/sign-in'>Log in</Link>
+                                </li>
+                                <li className={styles.signUp}>
+                                    <Link to='/sign-up'>Sign up</Link>
+                                </li>
+                            </>
+                        )} 
                         <li className={styles.search}>
                             <input type="text" placeholder="Search..." />
                         </li>    

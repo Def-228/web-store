@@ -17,20 +17,20 @@ export const ProductsPage = () => {
 
   return (
     <> 
-    <p className={style.title}>Explore Our Products</p>
-     <div className={style.container}>
+    <p className={styles.title}>Explore Our Products</p>
+     <div className={styles.container}>
         {items.map((product) => (
-        <div className={style.card}>
+        <div className={styles.card}>
          <div key={product.id}>
-           <img className={style.img} src={product.image} alt={product.title}/>
-           <p className={style.productTitle}>{product.title}</p> 
-           <p className={style.price}>{product.price} $</p>
+           <img className={styles.img} src={product.image} alt={product.title}/>
+           <p className={styles.productTitle}>{product.title}</p> 
+           <p className={styles.price}>{product.price} $</p>
           </div>
         </div>   
         ))}
     </div>
     <Link to="/">
-     <button className={style.home}>
+     <button className={styles.home}>
         Back to Home Page
     </button>  
     </Link>
