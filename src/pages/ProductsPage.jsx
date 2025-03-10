@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchProducts } from "../store/productSlice";
 import { useEffect } from "react";
 import { Link } from "react-router";
-import styles from "../styles/Products.module.css"
+import styles from "../styles/Product.module.css";
 
 export const ProductsPage = () => {
   const dispatch = useDispatch();

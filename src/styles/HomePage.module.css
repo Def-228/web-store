@@ -1,0 +1,83 @@
+.container{
+    display: flex;
+    padding-top: 180px;
+    gap: 60px;
+    
+}
+.listDiv {
+    display: flex;
+    flex-direction: column;
+    width: 460px;
+    max-width: 700px;
+    padding-left: 150px;
+}
+
+.list {
+    list-style: none;
+    width: 100%;
+}
+
+.list li {
+    padding: 10px;
+    height: 50px;
+    border-right: 1px solid rgb(200, 200, 200);
+    transition: 0.3s ease;
+    text-align: left;
+    width: 100%;
+}
+
+.list li:hover {
+    border-right: 3px solid #000;
+}
+
+.list li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 20px;
+    display: block;
+    width: 100%;
+}
+
+.iPhoneSale{
+    background-color: #000;
+    color: #fff;
+    width: 1180px;
+    height: 440px;
+    display: flex;
+    padding-left: 250px;
+    justify-content: space-between;
+    padding: 40px 60px;
+}
+.phone img{
+    width: 550px; 
+}
+
+.iPhoneText{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 0 50px;
+}
+.iPhone{
+    font-size: 23px;
+    padding-left: 40px;
+    display: flex;
+    padding-left: 0;
+    gap: 20px;
+}
+.text{
+    font-size: 65px;
+    letter-spacing: -3px;
+}
+.iPhone img{
+    width: 60px;
+    height: 62px;
+}
+.iPhone span{
+    padding-top: 17px;
+}
+.shop{
+    font-size: 23px;
+    color: #fff;
+}
