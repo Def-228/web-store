@@ -64,3 +64,6 @@ nav ul{
 .header nav ul li a:hover{
     color: black;
 }
+.accImg{
+    width: 50px;
+}

@@ -8,7 +8,10 @@ export const TopHeader = () => {
     return (
         <div className={styles.topHeader}>
             <p className={styles.text}>
-                {t("text")} <Link className={styles.Shop} to="/products">{t("shop")}</Link>
+                {t("text.topHeaderText")}
+                <li className={styles.ShopLi}>
+                    <Link className={styles.Shop} to="/products">{t("navs.topHeaderShopNow")}</Link>
+                </li>
             </p>
         </div>
     );

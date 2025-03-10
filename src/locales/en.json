@@ -1,4 +1,71 @@
 {
-    "text": "Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!",
-    "shop": "Shop Now"
+  "errors": {
+    "invalidEmail": "Enter a valid email",
+    "weakPassword": "Password must be at least 6 characters long",
+    "emailInUse": "This email is already registered!",
+    "invalidEmailFormat": "Incorrect email format!",
+    "registrationError": "Registration error: {{message}}",
+    "userNotFound": "User not found. Check your email.",
+    "wrongPassword": "Incorrect password. Try again.",
+    "userDisabled": "This account has been disabled.",
+    "tooManyRequests": "Too many login attempts. Try again later.",
+    "logInError": "Login error: {{message}}"
+  },
+  "messages": {
+    "userRegistered": "Successfully registered!",
+    "successfulRegistration": "You have been successfully registered!",
+    "userLoggedIn": "Successfully logged in!",
+    "successfulLogIn": "You have successfully logged into your account!"
+  },
+  "inputs": {
+    "headerInp": "Search..."
+  },
+  "buttons": {
+    "createAccBtn": "Create account",
+    "logOutBtn": "Log Out", 
+    "logInBtn": "Log In",
+    "viewAllProducts": "View all Products"
+  },
+  "navs": {
+    "topHeaderShopNow": "Shop Now!",
+    "headerHome": "Home Page",
+    "headerProducts": "Our Products",
+    "headerLogIn": "Log In",
+    "headerSignUp": "Sign Up",
+    "headerAccount": "My Account",
+    "homeWomenFash": "Women's Fashion",
+    "homeMenFash": "Men's Fashion",
+    "homeTech": "Technology",
+    "homeHome&life": "Home & Lifestyle",
+    "homeMed": "Medicine",
+    "homeSport&outdoor": "Sports & Outdoor",
+    "homeBabys&toys": "Baby's & Toys",
+    "homeGroc&pets": "Groceries & Pets",
+    "homeHealth&beuty": "Health & Beauty",
+    "homeShopNow": "Shop Now!"
+  },
+  "text": { 
+    "topHeaderText": "Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!",
+    "headerTitle": "Exclusive",
+    "homeIPhoneSale": "Up to 10% off Voucher",
+    "homeIPhoneSeries": "iPhone 14 Series",
+    "formDetails": "Enter your details below:",
+    "formEmail": "Email*",
+    "formPass": "Password*",
+    "createAcc": "Create an account",
+    "logInToAcc": "Log in to Exclusive",
+    "loggingToAcc": "Logging In..."
+  },
+  "homeProducts": {
+   "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+   "Mens Casual Premium Slim Fit T-Shirts ": "Mens Casual Premium Slim Fit T-Shirts",
+   "Mens Cotton Jacket": "Mens Cotton Jacket",
+   "Mens Casual Slim Fit": "Mens Casual Slim Fit",
+   "John Hardy Women's Legends Naga Gold & Silver Dragon Station Chain Bracelet": "John Hardy Women's Legends Naga Gold & Silver Dragon Station Chain Bracelet",
+   "Solid Gold Petite Micropave": "Solid Gold Petite Micropave",
+   "White Gold Plated Princess": "White Gold Plated Princess",
+   "Pierced Owl Rose Gold Plated Stainless Steel Double": "Pierced Owl Rose Gold Plated Stainless Steel Double",
+   "WD 2TB Elements Portable External Hard Drive - USB 3.0": "WD 2TB Elements Portable External Hard Drive - USB 3.0",
+   "SanDisk SSD PLUS 1TB Internal SSD - SATA III 6 Gb/s": "SanDisk SSD PLUS 1TB Internal SSD - SATA III 6 Gb/s"
   }
+}

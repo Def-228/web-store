@@ -12,7 +12,16 @@
     justify-content: center;
     font-size: 18px;
 }
+.text{
+    display: flex;
+    gap: 20px;
+}
 .Shop{
     font-weight: 700;
+}
+.ShopLi{
+    list-style: none;
+}
+.ShopLi a{
     color: white;
 }

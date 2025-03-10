@@ -1,37 +1,101 @@
-import { useState } from "react";
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-import { Link, useNavigate } from "react-router";
-import styles from '../styles/SignIn.module.css'
+import { useState, useEffect } from "react";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
+import Form from "../components/Form";
+import { auth } from "../firebaseConfig";
+import { useTranslation } from "react-i18next";
 
 export const SignIn = () => {
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const auth = getAuth();
+  const [pass, setPass] = useState("");
+  const [error, setError] = useState("");
+  const [showError, setShowError] = useState(false);
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
-  
-  const handleSignIn = async (e) => {
-    e.preventDefault();
+  const { t } = useTranslation();
+
+  useEffect(() => {
+    if (error) {
+      setShowError(true);
+      const timer = setTimeout(() => {
+        setShowError(false);
+        setError("");
+      }, 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [error]);
+
+  const triggerError = (message) => {
+    setError(message);
+    setShowError(true);
+  };
+
+  const signIn = async () => {
+    setLoading(true);
+
+    if (!email.includes("@")) {
+      triggerError(t("errors.invalidEmail"));
+      setLoading(false);
+      return;
+    }
+    if (pass.length < 6) {
+      triggerError(t("errors.weakPassword"));
+      setLoading(false);
+      return;
+    }
+
     try {
-      await signInWithEmailAndPassword(auth, email, password);
-      navigate("/");
+      const userCredential = await signInWithEmailAndPassword(auth, email, pass);
+      console.log(t("messages.userLoggedIn"), userCredential.user);
+      
+      navigate("/", { state: { successMessage: t("messages.successfulLogIn") } });
     } catch (error) {
-      console.error("Error signing in: ", error);
+      setLoading(false);
+      console.error("Login error:", error.code);
+
+      const errorMessages = {
+        "auth/user-not-found": t("errors.userNotFound"),
+        "auth/wrong-password": t("errors.wrongPassword"),
+        "auth/invalid-email": t("errors.invalidEmailFormat"),
+        "auth/user-disabled": t("errors.userDisabled"),
+        "auth/too-many-requests": t("errors.tooManyRequests"),
+      };
+
+      triggerError(errorMessages[error.code] || t("errors.loginError", { message: error.message }));
     }
   };
 
   return (
-    <div className={styles.container}>
-      <h2 className={styles.signIn}>Log In to Exclusive</h2>
-      <form onSubmit={handleSignIn}>
-        <p className={styles.text}>Enter your details below:</p>
-        <input className={styles.email} type="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
-        <input className={styles.password} type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} />
-        <button className={styles.signInBtn} type="submit">Log In</button>
-        <p className={styles.text2}>Don't have an account?</p>
-        <li>
-            <Link to='/sign-up'>Create an account</Link>
-        </li>
-      </form>
+    <div>
+      {showError && error && (
+        <div
+          style={{
+            position: "absolute",
+            top: 20,
+            right: 20,
+            backgroundColor: "red",
+            color: "white",
+            padding: "10px 20px",
+            borderRadius: "5px",
+            boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+            fontSize: "18px",
+            fontWeight: "500",
+            maxWidth: "300px",
+            zIndex: 3000,
+          }}
+        >
+          {error}
+        </div>
+      )}
+      <Form
+        title={t("text.logInToAcc")}
+        buttontitle={loading ? t("text.loggingToAcc") : t("buttons.logInBtn")}
+        email={email}
+        setEmail={setEmail}
+        pass={pass}
+        setPass={setPass}
+        submit={signIn}
+      />
     </div>
   );
 };

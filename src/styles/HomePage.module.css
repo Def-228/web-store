@@ -1,83 +1,199 @@
-.container{
-    display: flex;
-    padding-top: 180px;
-    gap: 60px;
-    
-}
-.listDiv {
+.container {
     display: flex;
     flex-direction: column;
-    width: 460px;
-    max-width: 700px;
-    padding-left: 150px;
+    align-items: center;
+    position: relative;
+    top: 160px;
 }
 
+.successMessage {
+    background-color: #4caf50;
+    color: white;
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.topContent {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1400px;
+}
+
+.listDiv ul {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-left: 0;
+}
+
+.listDiv ul li {
+    padding: 8px 0;
+    font-size: 16px;
+}
 .list {
     list-style: none;
-    width: 100%;
+    padding: 0;
 }
 
 .list li {
-    padding: 10px;
-    height: 50px;
-    border-right: 1px solid rgb(200, 200, 200);
-    transition: 0.3s ease;
-    text-align: left;
-    width: 100%;
-}
-
-.list li:hover {
-    border-right: 3px solid #000;
-}
-
-.list li a {
-    text-decoration: none;
-    color: #333;
+    padding: 15px 0;
     font-size: 20px;
-    display: block;
+}
+
+.list a {
+    text-decoration: none;
+    color: black;
+    transition: 0.3s;
+    font-size: 22px;
+}
+
+.list a:hover {
+    color: red;
+}
+
+.iPhoneSale {
+    display: flex;
+    background-color: black;
+    color: white;
+    padding: 30px;
     width: 100%;
-}
-
-.iPhoneSale{
-    background-color: #000;
-    color: #fff;
-    width: 1180px;
-    height: 440px;
-    display: flex;
-    padding-left: 250px;
+    max-width: 1000px;
+    border-radius: 15px;
     justify-content: space-between;
-    padding: 40px 60px;
-}
-.phone img{
-    width: 550px; 
+    align-items: center;
 }
 
-.iPhoneText{
+.iPhoneText {
+    list-style: none;
+    padding: 0;
+}
+
+.iPhone {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    font-size: 24px;
+}
+
+.iPhone img {
+    width: 32px;
+    height: 32px;
+    margin-right: 15px;
+}
+
+.text {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.shopNow {
+    width: 220px;
+    background-color: white;
+    color: black;
+    padding: 15px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 22px;
+    transition: 0.3s;
+    border: none;
+}
+
+.shopNow a {
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+}
+
+.shopNow:hover {
+    background-color: gray;
+}
+
+.phone img {
+    width: 450px;
+}
+
+.productsContainer {
+    width: 100%;
+    max-width: 1400px;
+    margin-top: 30px;
+}
+
+.productsList {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 15px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.productsList::-webkit-scrollbar {
+    display: none;
+}
+
+.productCard {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
+    min-width: 250px;
+    max-width: 250px;
+    text-align: center;
+}
+
+.productImage {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+}
+
+.productName {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.productPrice {
+    font-size: 24px;
+    color: red;
+    font-weight: bold;
+}
+
+.view {
+    display: flex;
     justify-content: center;
-    gap: 20px;
-    padding: 0 0 50px;
+    align-items: center;
+    width: 270px;
+    background-color: rgb(222, 1, 1);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 30px;
+    text-decoration: none;
+    font-size: 22px;
+    cursor: pointer;
+    border: none;
 }
-.iPhone{
-    font-size: 23px;
-    padding-left: 40px;
+
+.viewLi{
+    list-style: none;
+    max-width: 270px;
     display: flex;
-    padding-left: 0;
-    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    margin: 30px auto;
 }
-.text{
-    font-size: 65px;
-    letter-spacing: -3px;
+
+.viewLi a {
+    text-decoration: none;
+    color: white;
+    
 }
-.iPhone img{
-    width: 60px;
-    height: 62px;
-}
-.iPhone span{
-    padding-top: 17px;
-}
-.shop{
-    font-size: 23px;
-    color: #fff;
+
+.view:hover {
+    background-color: darkred;
 }

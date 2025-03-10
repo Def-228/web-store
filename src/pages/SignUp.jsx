@@ -1,41 +1,93 @@
-import { useState } from "react";
-import { createUserWithEmailAndPassword, getAuth, } from "firebase/auth";
-import { useNavigate } from "react-router";
-import styles from '../styles/SignUp.module.css'
-import { app } from "../firebaseConfig";
+import { useEffect, useState } from "react";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
+import { auth } from "../firebaseConfig";
+import Form from "../components/Form";
+import { useTranslation } from "react-i18next";
 
 export const SignUp = () => {
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const auth = getAuth(app);
+  const [pass, setPass] = useState("");
+  const [error, setError] = useState("");
+  const [showError, setShowError] = useState(false);
   const navigate = useNavigate();
-  
-  const handleSignUp = async (e) => {
-    e.preventDefault();
+  const { t } = useTranslation();
 
-    if (!email || !password) {
-        setError("Пожалуйста, введите email и пароль.");
-        return;
-      }
+  useEffect(() => {
+    if (error) {
+      setShowError(true);
+      const timer = setTimeout(() => {
+        setShowError(false);
+        setError("");
+      }, 4000);
+      return () => clearTimeout(timer);
+    }
+  }, [error]);
+
+  const triggerError = (message) => {
+    setError(message);
+    setShowError(true);
+  };
+
+  const signUp = async () => {
+    if (!email.includes("@")) {
+      triggerError(t("errors.invalidEmail"));
+      return;
+    }
+    if (pass.length < 6) {
+      triggerError(t("errors.weakPassword"));
+      return;
+    }
 
     try {
-      await createUserWithEmailAndPassword(auth, email, password);
-      navigate("/");
+      const userCredential = await createUserWithEmailAndPassword(auth, email, pass);
+      console.log(t("messages.userRegistered"), userCredential.user);
+
+      navigate("/", { state: { successMessage: t("messages.successfulRegistration") } });
     } catch (error) {
-      console.error("Error signing up: ", error.message);
-      setError(error.message);
+      console.error("Firebase error:", error.code);
+
+      const errorMessages = {
+        "auth/email-already-in-use": t("errors.emailInUse"),
+        "auth/invalid-email": t("errors.invalidEmailFormat"),
+        "auth/weak-password": t("errors.weakPassword"),
+      };
+
+      triggerError(errorMessages[error.code] || t("errors.registrationError", { message: error.message }));
     }
   };
 
   return (
-    <div className={styles.container}>
-      <h2 className={styles.signUp}>Create an account</h2>
-      <form onSubmit={handleSignUp}>
-        <p className={styles.text}>Enter your details below:</p>
-        <input className={styles.email} type="email" placeholder="Email*" onChange={(e) => setEmail(e.target.value)} />
-        <input className={styles.password} type="password" placeholder="Password*" onChange={(e) => setPassword(e.target.value)} />
-        <button className={styles.signUpBtn} type="submit">Create Account</button>
-      </form>
+    <div>
+      {showError && error && (
+        <div
+          style={{
+            position: "absolute",
+            top: 20,
+            right: 20,
+            backgroundColor: "red",
+            color: "white",
+            padding: "10px 20px",
+            borderRadius: "5px",
+            boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+            fontSize: "18px",
+            fontWeight: "500",
+            maxWidth: "300px",
+            zIndex: 3000,
+          }}
+        >
+          {error}
+        </div>
+      )}
+      <Form
+        title={t("text.createAcc")}
+        buttontitle={t("buttons.createAccBtn")}
+        email={email}
+        setEmail={setEmail}
+        pass={pass}
+        setPass={setPass}
+        submit={signUp}
+      />
     </div>
   );
 };

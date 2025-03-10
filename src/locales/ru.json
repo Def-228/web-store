@@ -1,5 +1,71 @@
 {
-    "text": "Летняя распродажа на все купальные костюмы и бесплатная экспресс-доставка - СКИДКА 50%!",
-    "shop": "Купить сейчас"
-  }
-  
+  "errors": {
+    "invalidEmail": "Введите правильную почту",
+    "weakPassword": "Пароль должен содержать не менее 6 символов",
+    "emailInUse": "Эта почта уже зарегистрирована!",
+    "invalidEmailFormat": "Неправильный формат почты",
+    "registrationError": "Ошибка регистрации: {{message}}",
+    "userNotFound": "Пользователь не найден. Проверьте свою почту",
+    "wrongPassword": "Неправильный пароль. Попробуйте снова",
+    "userDisabled": "Этот аккаунт был отключен",
+    "tooManyRequests": "Очень много попыток войти. Попробуйте ещё раз попозже",
+    "loginError": "Ошибка входа: {{message}}"
+  },
+  "messages": {
+    "userRegistered": "Успешная регистрация!",
+    "successfulRegistration": "Вы успешно зарегистрировались!",
+    "userLoggedIn": "Успешный вход в аккаунт!",
+    "successfulLogIn": "Вы успешно вошли в свой аккаунт!"
+  },
+  "inputs": {
+    "headerInp": "Поиск..."
+  },
+  "buttons": {
+    "createAccBtn": "Зарегистрироваться",
+    "logOutBtn": "Выход", 
+    "logInBtn": "Войти",
+    "viewAllProducts": "Все продукты"
+  },  
+  "navs": {
+    "topHeaderShopNow": "Скорее покупай!",
+    "headerHome": "Главная",
+    "headerProducts": "Продукты",
+    "headerLogIn": "Вход",
+    "headerSignUp": "Регистрация",
+    "headerAccount": "Мой аккаунт",
+    "homeWomenFash": "Женщинам",
+    "homeMenFash": "Мужчинам",
+    "homeTech": "Технология",
+    "homeHome&life": "Дом и Образ жизни",
+    "homeMed": "Медицина",
+    "homeSport&outdoor": "Спорт и Прогулка",
+    "homeBabys&toys": "Детям и Игрушки",
+    "homeGroc&pets": "Продукты и Домашним животным",
+    "homeHealth&beuty": "Здоровье и Красота",
+    "homeShopNow": "Скорее покупай!"
+  },
+  "text": { 
+    "topHeaderText": "Летняя распродажа на все купальные костюмы и бесплатная экспресс-доставка - СКИДКА 50%!",
+    "headerTitle": "Exclusive",
+    "homeIPhoneSale": "Купон на скидку до 10%",
+    "homeIPhoneSeries": "Серии iPhone 14",
+    "formDetails": "Введите свои данные ниже:",
+    "formEmail": "Электронная почта*",
+    "formPass": "Пароль*",
+    "createAcc": "Создать аккаунт",
+    "logInToAcc": "Вход в аккаунт",
+    "loggingToAcc": "Вы входите в аккаунт..."
+  },
+  "homeProducts": {
+    "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops": "Fjallraven - Рюкзак Foldsack No. 1, вмещает 15 ноутбуков",
+    "Mens Casual Premium Slim Fit T-Shirts ": "Мужская повседневная футболк премиум-класса Slim Fit",
+    "Mens Cotton Jacket": "Мужская хлопковая куртка",
+    "Mens Casual Slim Fit": "Мужская повседневная облегающая посадка",
+    "John Hardy Women's Legends Naga Gold & Silver Dragon Station Chain Bracelet": "Браслет-цепочка для женщин John Hardy Legends Naga Gold & Silver Dragon Station",
+    "Solid Gold Petite Micropave": "Чистое золото, миниатюрное микропаве",
+    "White Gold Plated Princess": "Принцесса с покрытием из белого золота",
+    "Pierced Owl Rose Gold Plated Stainless Steel Double": "Двойной проколотый сова из нержавеющей стали с розовым золотом",
+    "WD 2TB Elements Portable External Hard Drive - USB 3.0": "Портативный внешний жесткий диск WD Elements емкостью 2 ТБ — USB 3.0",
+    "SanDisk SSD PLUS 1TB Internal SSD - SATA III 6 Gb/s": "SanDisk SSD PLUS 1TB Внутренний SSD - SATA III 6 Гбит/с"
+   }
+}     

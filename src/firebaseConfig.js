@@ -1,13 +1,16 @@
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
+import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyD-lQSYMN_wv4C3qldCU0zX8IowJNj_t9Y",
-  authDomain: "web-store-751c1.firebaseapp.com",
-  projectId: "web-store-751c1",
-  storageBucket: "web-store-751c1.firebasestorage.app",
-  messagingSenderId: "320047582116",
-  appId: "1:320047582116:web:e1f5a0442507f494600f31",
+  apiKey: "AIzaSyD7ewR1I218IjK9iAgx4uPFzY5wU73ki7o",
+  authDomain: "web-store-9632f.firebaseapp.com",
+  projectId: "web-store-9632f",
+  storageBucket: "web-store-9632f.firebasestorage.app",
+  messagingSenderId: "553733866346",
+  appId: "1:553733866346:web:39647717026a2966b09b13",
 };
 
 const app = initializeApp(firebaseConfig);
+const auth = getAuth(app); 
+
+export { app, auth };
